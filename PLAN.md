@@ -291,7 +291,8 @@ Each module's public API is its `index.ts`; the stub bodies there are the contra
 - **Open source (Omar, 2026-11-22):** AGPL-3.0-only (`LICENSE`, `README.md`, `THIRD_PARTY.md`). The public source is
   branch `main` of astromar96/balligh, built by `scripts/export-public.sh`: this repository's HEAD without
   `research/` and without fixture data (captured provider responses may not be republished), in a fresh history,
-  because earlier commits contain that data. The full history stays local. Where fixture data is missing,
+  because earlier commits contain that data. The full history lives in the private repo astromar96/balligh-private
+  (remote `origin` of this checkout). Where fixture data is missing,
   `scripts/fixture-gate.cjs` leaves the tests and labs that need it out of tsc, ESLint, vitest and Metro, and app code
   may never be left out. To publish again: export into an empty dir, run the checks there, and commit on top of
   the public `main`.
