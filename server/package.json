@@ -1,0 +1,23 @@
+{
+  "name": "balligh-server",
+  "version": "0.1.0",
+  "license": "AGPL-3.0-only",
+  "private": true,
+  "type": "module",
+  "description": "Publishes Balligh clips to the Share Quran pages: renders a share link in headless Chrome, posts it.",
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "build": "esbuild src/main.ts src/auth.ts --bundle --platform=node --format=esm --target=node24 --outdir=dist --out-extension:.js=.mjs --external:playwright-core --banner:js=\"import { createRequire } from 'node:module'; const require = createRequire(import.meta.url);\"",
+    "start": "node --disable-warning=ExperimentalWarning dist/main.mjs",
+    "dev": "npm run build && node --disable-warning=ExperimentalWarning --env-file-if-exists=.env dist/main.mjs",
+    "auth": "npm run build && node --env-file-if-exists=.env dist/auth.mjs"
+  },
+  "dependencies": {
+    "playwright-core": "1.65.1"
+  },
+  "devDependencies": {
+    "esbuild": "^0.27.0"
+  }
+}

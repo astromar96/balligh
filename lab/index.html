@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Render lab</title>
+    <style>
+      @font-face { font-family: 'Amiri Quran'; src: url('/fonts/AmiriQuran-Regular.ttf') format('truetype'); font-display: block; }
+      body { background: #1b1b1f; color: #eee; font-family: system-ui, sans-serif; margin: 16px; }
+      h2 { font-size: 14px; margin: 18px 0 6px; color: #9cf; direction: ltr; text-align: left; }
+      canvas { background: #fdf8ec; display: block; max-width: 100%; }
+      .dom { background: #fdf8ec; color: #222; font-family: 'Amiri Quran'; font-size: 40px; line-height: 2.2; padding: 8px 16px; }
+      #log { direction: ltr; text-align: left; font: 12px ui-monospace, monospace; white-space: pre-wrap; color: #bbb; }
+    </style>
+  </head>
+  <body>
+    <div id="out"></div>
+    <pre id="log"></pre>
+    <script type="module" src="./lab.ts"></script>
+  </body>
+</html>

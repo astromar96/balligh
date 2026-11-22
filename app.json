@@ -1,0 +1,45 @@
+{
+  "expo": {
+    "name": "بلّغ",
+    "slug": "balligh",
+    "scheme": "balligh",
+    "version": "0.1.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "app.balligh"
+    },
+    "android": {
+      "package": "app.balligh",
+      "adaptiveIcon": {
+        "backgroundColor": "#1D6B57",
+        "foregroundImage": "./assets/android-icon-foreground.png",
+        "monochromeImage": "./assets/android-icon-monochrome.png"
+      },
+      "predictiveBackGestureEnabled": false
+    },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./assets/favicon.png",
+      "name": "بلّغ — شارك آيات القرآن",
+      "shortName": "بلّغ",
+      "lang": "ar",
+      "themeColor": "#1D6B57",
+      "backgroundColor": "#F2F4F3"
+    },
+    "plugins": [
+      "expo-router",
+      "expo-font",
+      "expo-asset",
+      "expo-sharing",
+      ["expo-localization", { "supportsRTL": true, "forcesRTL": true }]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "chunking": { "mode": "granular" }
+    }
+  }
+}
